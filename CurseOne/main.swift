@@ -7,7 +7,7 @@
 
 import UIKit
 
-//1
+// 1
 
 func number(x: Int) -> String {
     if x % 2 == 0 {
@@ -19,7 +19,8 @@ func number(x: Int) -> String {
 
 print(number(x: 8))
 
-//2
+
+// 2
 
 func number(x: Int) -> String {
     if x % 3 == 0 {
@@ -30,3 +31,33 @@ func number(x: Int) -> String {
 }
 
 print(number(x: 12))
+
+
+// 3
+
+var array = [Int]()
+
+func getArray(number: Int) {
+    for newNumber in 1...number  {
+        array.append(newNumber)
+    }
+}
+
+getArray(number: 100)
+print(array)
+
+// 4
+
+var array = [Int]()
+
+func getArray(number: Int) {
+    for newNumber in 1...number  {
+        if newNumber % 2 != 0 && newNumber % 3 == 0 {
+            array.append(newNumber)
+        }
+        
+    }
+}
+
+getArray(number: 100)
+print(array)
