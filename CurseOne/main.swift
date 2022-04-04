@@ -7,33 +7,26 @@
 
 import Foundation
 
-// 1
+// MARK: 1. Написать функцию, которая определяет, четное число или нет.
 
-func numberEven(number: Int) -> String {
-    if number % 2 == 0 {
-        return "Четное"
-    } else {
-        return "Нечетное"
-    }
+func numberEven(number: Int) -> Bool {
+    number % 2 == 0 ? true : false
 }
 
 print(numberEven(number: 9))
 print("---------------------------")
 
-// 2
+// MARK: 2. Написать функцию, которая определяет, делится ли число без остатка на 3.
 
-func numberDivThree(number: Int) -> String {
-    if number % 3 == 0 {
-        return "Делится на 3 без остатка"
-    } else {
-        return "Не делится на 3 без остатка"
-    }
+
+func numberDivThree(number: Int) -> Bool {
+    number % 3 == 0 ? true : false
 }
 
 print(numberDivThree(number: 11))
 print("---------------------------")
 
-// 3
+// MARK: 3. Создать возрастающий массив из 100 чисел.
 
 var array = [Int]()
 
@@ -44,15 +37,25 @@ for newNumber in 1...100  {
 print(array)
 print("---------------------------")
 
-// 4
+// MARK: 4. Удалить из этого массива все четные числа и все числа, которые не делятся на 3.
 
-var newArray = [Int]()
-
-for newNumber in 1...100  {
-    if newNumber % 2 != 0 && newNumber % 3 == 0 {
-        newArray.append(newNumber)
+var count = 0
+for newNumber in array  {
+    if numberEven(number: newNumber) || !numberDivThree(number: newNumber) {
+        array.remove(at: count)
+    } else {
+        count += 1
     }
 }
+//
+//var count = 0
+//for newNumber in array  {
+//    if newNumber % 2 == 0 || newNumber % 3 != 0 {
+//        array.remove(at: count)
+//    } else {
+//        count += 1
+//    }
+//}
 
-print(newArray)
+print(array)
 print("---------------------------")
