@@ -5,59 +5,54 @@
 //  Created by Константин Савченко on 31.03.2022.
 //
 
-import UIKit
+import Foundation
 
 // 1
 
-func number(x: Int) -> String {
-    if x % 2 == 0 {
+func numberEven(number: Int) -> String {
+    if number % 2 == 0 {
         return "Четное"
     } else {
         return "Нечетное"
     }
 }
 
-print(number(x: 8))
-
+print(numberEven(number: 9))
+print("---------------------------")
 
 // 2
 
-func number(x: Int) -> String {
-    if x % 3 == 0 {
+func numberDivThree(number: Int) -> String {
+    if number % 3 == 0 {
         return "Делится на 3 без остатка"
     } else {
         return "Не делится на 3 без остатка"
     }
 }
 
-print(number(x: 12))
-
+print(numberDivThree(number: 11))
+print("---------------------------")
 
 // 3
 
 var array = [Int]()
 
-func getArray(number: Int) {
-    for newNumber in 1...number  {
-        array.append(newNumber)
-    }
+for newNumber in 1...100  {
+    array.append(newNumber)
 }
 
-getArray(number: 100)
 print(array)
+print("---------------------------")
 
 // 4
 
-var array = [Int]()
+var newArray = [Int]()
 
-func getArray(number: Int) {
-    for newNumber in 1...number  {
-        if newNumber % 2 != 0 && newNumber % 3 == 0 {
-            array.append(newNumber)
-        }
-        
+for newNumber in 1...100  {
+    if newNumber % 2 != 0 && newNumber % 3 == 0 {
+        newArray.append(newNumber)
     }
 }
 
-getArray(number: 100)
-print(array)
+print(newArray)
+print("---------------------------")
