@@ -42,3 +42,4 @@ listOfClanPeopleSorted.forEach() {
 }
 
 
+
